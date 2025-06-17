@@ -1,0 +1,20 @@
+User-Agent: *
+Disallow: /page10603100.html
+Disallow: /footer
+Disallow: /page11493203.html
+Disallow: /ops
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /*_escaped_fragment_*
+Disallow:
+
+
+Sitemap: https://filteh.by/sitemap.xml
+Sitemap: https://filteh.by/sitemap-feeds.xml
+Host: https://filteh.by

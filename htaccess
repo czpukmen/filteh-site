@@ -1,0 +1,42 @@
+ErrorDocument 403 /page11493203.html
+ErrorDocument 404 /page11493203.html
+
+DirectoryIndex page10584715.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://filteh\.by/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.filteh.by [NC]
+RewriteRule ^(.*)$ https://filteh\.by/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^news$ page10591365.html [NC]
+RewriteRule ^news/$ page10591365.html [NC]
+
+RewriteRule ^articles$ page44954779.html [NC]
+RewriteRule ^articles/$ page44954779.html [NC]
+
+RewriteRule ^products$ page10594869.html [NC]
+RewriteRule ^products/$ page10594869.html [NC]
+
+RewriteRule ^materials$ page10725790.html [NC]
+RewriteRule ^materials/$ page10725790.html [NC]
+
+RewriteRule ^services$ page10725904.html [NC]
+RewriteRule ^services/$ page10725904.html [NC]
+
+RewriteRule ^footer$ page10603100.html [NC]
+RewriteRule ^footer/$ page10603100.html [NC]
+
+RewriteRule ^about$ page10725768.html [NC]
+RewriteRule ^about/$ page10725768.html [NC]
+
+RewriteRule ^ops$ page11493203.html [NC]
+RewriteRule ^ops/$ page11493203.html [NC]
+
+

@@ -1,1 +1,48 @@
-<html><head><meta name="robots" content="noindex"><title>Tilda</title></head><body style="background-color:#eee;"><table style="width:100%; height:100%;"><tr><td style="vertical-align: middle; text-align: center;"><a href="https://tilda.cc"><img src="//tilda.ws/img/logo404.png" border="0" alt="Tilda" /></a></td></tr></table></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Перенаправление...</title>
+    <script type="text/javascript">
+        // Перенаправление для GitHub Pages
+        var path = window.location.pathname;
+        var baseUrl = window.location.origin + '/filteh-site/';
+        
+        // Определяем базовый URL с учетом репозитория
+        var repoPath = '/filteh-site';
+        var cleanPath = path.replace(repoPath, '');
+        
+        // Список ваших страниц Tilda
+        var routes = {
+            '/': 'index.html',
+            '/page10591365': 'page10591365.html',
+            '/page10594869': 'page10594869.html', 
+            '/page10603100': 'page10603100.html',
+            '/page10725768': 'page10725768.html',
+            '/page10725790': 'page10725790.html',
+            '/page10725904': 'page10725904.html',
+            '/page11493203': 'page11493203.html',
+            '/page44954779': 'page44954779.html'
+        };
+        
+        // Проверяем, есть ли такая страница
+        if (routes[cleanPath]) {
+            window.location.replace(baseUrl + routes[cleanPath]);
+        } else if (routes[path]) {
+            window.location.replace(baseUrl + routes[path]);
+        } else {
+            // Попробуем прямой доступ к файлу
+            var fileName = cleanPath.replace('/', '') + '.html';
+            if (fileName.startsWith('page')) {
+                window.location.replace(baseUrl + fileName);
+            } else {
+                // Если страница не найдена, идем на главную
+                window.location.replace(baseUrl);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Перенаправление...</p>
+</body>
+</html>
